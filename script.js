@@ -3,7 +3,7 @@ async function fetchOffers() {
     // console.log(response);
     const offers = await response.json();
     
-    
+    document.querySelector("h1").style.display = "block";
     for (let i =0; i < offers.length; i++) {
         // console.log(offers[i].titre) // affiche les titres
         // console.log(offers[i].description) // affiche les description
@@ -18,7 +18,7 @@ async function fetchOffers() {
         document.querySelector('#offers-container').appendChild(elementTitle);
         document.querySelector('#offers-container').appendChild(elementDescriptions);
     }
+    document.querySelector("h1").style.display = "none";
 };
 fetchOffers();
-
 
